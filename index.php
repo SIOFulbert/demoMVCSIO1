@@ -8,5 +8,6 @@
     application::start("templatebase/index.php");
 
 
+
   //  var_dump(category::LoadAll());
  ?>

@@ -25,6 +25,14 @@ class category{
       $this->_designation=$unedesignation;
   }
 
+  public function Delete(){
+    $dbh = application::getConnexion();
+
+    $sql = "DELETE FROM category WHERE id=?";
+    $stmt= $dbh->prepare($sql);
+    $stmt->execute([$this->unid]);
+  }
+
 
   public static function LoadAll(){
     try {
